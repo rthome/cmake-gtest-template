@@ -1,3 +1,4 @@
+include(GoogleTest)
 
 # Download and unpack googletest at configure time
 configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
@@ -27,3 +28,5 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
 # Now simply link against gtest or gtest_main as needed. Eg
 add_executable(foobar-test example.cpp)
 target_link_libraries(foobar-test libfoobar gmock_main)
+
+gtest_discover_tests(foobar-test)
