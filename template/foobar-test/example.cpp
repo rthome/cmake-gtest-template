@@ -1,5 +1,13 @@
-#include "gtest/gtest.h"
+#include "gmock/gmock.h"
 
-TEST(ExampleTests, Example) {
-    ASSERT_EQ(1, 1);
+#include "example.h"
+
+using namespace testing;
+
+namespace foobar::tests
+{
+	TEST(ExampleTests, Example) {
+		foobar::Example example{};
+        ASSERT_THAT(example.getValue(), Eq(99));
+	}
 }

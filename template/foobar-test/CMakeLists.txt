@@ -26,4 +26,4 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
 
 # Now simply link against gtest or gtest_main as needed. Eg
 add_executable(foobar-test example.cpp)
-target_link_libraries(foobar-test libfoobar gtest_main)
+target_link_libraries(foobar-test libfoobar gmock_main)
