@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+
 include(GoogleTest)
 
 # Download and unpack googletest at configure time
